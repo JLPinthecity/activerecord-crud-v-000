@@ -1,4 +1,5 @@
 require 'pry'
+
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
@@ -54,7 +55,6 @@ def can_be_found_updated_and_saved
   movie = Movie.find_by(title: "Awesome Flick")
   movie.update(title: "Even Awesomer Flick")
   movie.save
-    binding.pry
   movie.title
 end
 
