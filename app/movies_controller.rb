@@ -63,11 +63,13 @@ def can_update_using_update_method
 end
 
 def can_update_multiple_items_at_once
-  # Change title of all movies to "A Movie"
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  __
+    Movie.all.each do |film|
+      film.update(title: "A Movie")
+    end
+  end
 end
 
 def can_destroy_a_single_item
