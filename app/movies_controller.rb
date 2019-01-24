@@ -70,7 +70,7 @@ def can_update_multiple_items_at_once
       film.update(title: "A Movie")
     end
  end
-end
+
 
 def can_destroy_a_single_item
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
